@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var eventList: EventList = EventList()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        
+        TimelineView(eventList: eventList)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        
+        let events: [Event] = [Event(name: "New Year 2022", date: "01/01/2022"), Event(name: "New Year 2021", date: "01/01/2021"), Event(name: "New Year 2023", date: "01/01/2023")]
+               
+        ContentView(eventList: EventList(events: events))
     }
 }
