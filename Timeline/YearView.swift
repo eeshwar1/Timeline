@@ -10,7 +10,7 @@ import SwiftUI
 struct YearView: View {
     
     @State var year: String
-    @State var yearHeight: CGFloat = 250.0
+    @State var yearHeight: CGFloat = 360.0
     @State var padding: CGFloat = 0
     
     @State var eventList: EventList = EventList()
