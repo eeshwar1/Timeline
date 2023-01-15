@@ -40,7 +40,7 @@ struct YearView: View {
                 
             }
         }
-        .frame(width: 500, height: yearHeight, alignment: .leading)
+        
         
     }
     
