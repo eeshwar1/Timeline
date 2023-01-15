@@ -11,6 +11,13 @@
 		652B598C29722D3D0045BBF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B598B29722D3D0045BBF0 /* ContentView.swift */; };
 		652B598E29722D3E0045BBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652B598D29722D3E0045BBF0 /* Assets.xcassets */; };
 		652B599129722D3E0045BBF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652B599029722D3E0045BBF0 /* Preview Assets.xcassets */; };
+		652B599C2972331E0045BBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B59982972331E0045BBF0 /* AppDelegate.swift */; };
+		652B599D2972331E0045BBF0 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B59992972331E0045BBF0 /* MonthView.swift */; };
+		652B599E2972331E0045BBF0 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B599A2972331E0045BBF0 /* TimelineView.swift */; };
+		652B599F2972331E0045BBF0 /* YearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B599B2972331E0045BBF0 /* YearView.swift */; };
+		652B59A22972334F0045BBF0 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B59A02972334F0045BBF0 /* Event.swift */; };
+		652B59A32972334F0045BBF0 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B59A12972334F0045BBF0 /* EventList.swift */; };
+		652B59A52972337B0045BBF0 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B59A42972337B0045BBF0 /* Date+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,13 @@
 		652B598D29722D3E0045BBF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		652B599029722D3E0045BBF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		652B599229722D3E0045BBF0 /* Timeline.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Timeline.entitlements; sourceTree = "<group>"; };
+		652B59982972331E0045BBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Timeline/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		652B59992972331E0045BBF0 /* MonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonthView.swift; path = Timeline/MonthView.swift; sourceTree = SOURCE_ROOT; };
+		652B599A2972331E0045BBF0 /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineView.swift; path = Timeline/TimelineView.swift; sourceTree = SOURCE_ROOT; };
+		652B599B2972331E0045BBF0 /* YearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YearView.swift; path = Timeline/YearView.swift; sourceTree = SOURCE_ROOT; };
+		652B59A02972334F0045BBF0 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = ../../TimeSince/TimeSince/Event.swift; sourceTree = "<group>"; };
+		652B59A12972334F0045BBF0 /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventList.swift; path = ../../TimeSince/TimeSince/EventList.swift; sourceTree = "<group>"; };
+		652B59A42972337B0045BBF0 /* Date+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+String.swift"; path = "../../TimeSince/TimeSince/Date+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +67,14 @@
 			isa = PBXGroup;
 			children = (
 				652B598929722D3D0045BBF0 /* TimelineApp.swift */,
+				652B59A02972334F0045BBF0 /* Event.swift */,
+				652B59A42972337B0045BBF0 /* Date+String.swift */,
+				652B59A12972334F0045BBF0 /* EventList.swift */,
 				652B598B29722D3D0045BBF0 /* ContentView.swift */,
+				652B59982972331E0045BBF0 /* AppDelegate.swift */,
+				652B59992972331E0045BBF0 /* MonthView.swift */,
+				652B599A2972331E0045BBF0 /* TimelineView.swift */,
+				652B599B2972331E0045BBF0 /* YearView.swift */,
 				652B598D29722D3E0045BBF0 /* Assets.xcassets */,
 				652B599229722D3E0045BBF0 /* Timeline.entitlements */,
 				652B598F29722D3E0045BBF0 /* Preview Content */,
@@ -139,8 +160,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652B59A32972334F0045BBF0 /* EventList.swift in Sources */,
+				652B599C2972331E0045BBF0 /* AppDelegate.swift in Sources */,
+				652B599F2972331E0045BBF0 /* YearView.swift in Sources */,
 				652B598C29722D3D0045BBF0 /* ContentView.swift in Sources */,
 				652B598A29722D3D0045BBF0 /* TimelineApp.swift in Sources */,
+				652B59A52972337B0045BBF0 /* Date+String.swift in Sources */,
+				652B599E2972331E0045BBF0 /* TimelineView.swift in Sources */,
+				652B59A22972334F0045BBF0 /* Event.swift in Sources */,
+				652B599D2972331E0045BBF0 /* MonthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
