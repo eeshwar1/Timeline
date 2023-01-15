@@ -12,12 +12,14 @@ struct MonthView: View {
     @State var month: String
     @State var monthHeight: CGFloat = 30
     @State var padding: CGFloat = 0
+    @State var expandEvents: Bool = false
+    @State var eventPadding: CGFloat = -18
     
     @State var eventList: EventList = EventList()
     
     var body: some View {
         
-        HStack(spacing: 0) {
+        HStack(alignment: .center, spacing: 0) {
             
             Rectangle()
                 .fill(.gray)
@@ -35,7 +37,7 @@ struct MonthView: View {
             }
             .frame(width: 40, height: 20, alignment: .leading)
             
-            VStack (spacing: -18){
+            VStack (spacing: eventPadding){
                   
                 ForEach(eventList.getEvents(), id:\.id) {
                     
@@ -55,9 +57,7 @@ struct MonthView: View {
                     
                 }
                 
-                // let eventCount = eventList.getEvents().count
-                
-                if (eventList.getEvents().count > 1) {
+              if (eventList.getEvents().count > 1 && !expandEvents) {
                     
                     ZStack {
                         Circle()
@@ -75,8 +75,17 @@ struct MonthView: View {
             }
         }
         .padding(padding)
+        .onTapGesture(count: 2) {
+            
+            expandEvents.toggle()
+            
+            eventPadding = expandEvents ? 5: -18
+            monthHeight = expandEvents ? CGFloat(eventList.getEvents().count * 30) : 30.0
+        }
+        
        
     }
+    
    
 }
 
@@ -84,8 +93,10 @@ struct MonthView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        let events = [Event(name: "Republic Day", date: "01/26/2021"), Event(name: "New Year 2021", date: "01/01/2021")]
+        let events = [Event(name: "Republic Day", date: "01/26/2021"), Event(name: "New Year 2021", date: "01/01/2021"),
+            Event(name: "New Year 2021", date: "01/01/2021"),
+            Event(name: "New Year 2021", date: "01/01/2021")]
         
-        MonthView(month: "Jan", padding: 10, eventList: EventList(events: events))
+        MonthView(month: "Jan", padding: 10, expandEvents: true, eventList: EventList(events: events))
     }
 }
